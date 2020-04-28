@@ -1,5 +1,5 @@
 {
-    "name": "JohnGanem/test-technique",
+    "name": "johnganem/test-technique",
     "type": "project",
     "description": "Test technique Eficia",
     "keywords": [
@@ -10,6 +10,7 @@
     "require": {
         "php": "^7.2.5",
         "guzzlehttp/guzzle": "^6.3",
+        "karpy47/php-mqtt-client": "^1.0",
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
         "league/flysystem-cached-adapter": "^1.0",
