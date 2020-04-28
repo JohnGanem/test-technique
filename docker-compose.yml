@@ -6,29 +6,29 @@ services:
     ports:
       - "80:80"
     volumes:
-      - .:/var/www/projet_annuel
-      - ./docker/nginx/projet_annuel.conf:/etc/nginx/conf.d/projet_annuel.conf
+      - .:/var/www/test
+      - ./docker/nginx/test.conf:/etc/nginx/conf.d/test.conf
     depends_on:
       - php
     networks:
-      - projet_annuel
+      - test
 
   php:
     build:
       context: ./docker/php
       dockerfile: Dockerfile
     volumes:
-      - .:/var/www/projet_annuel
+      - .:/var/www/test
     networks:
-      - projet_annuel
+      - test
 
   mysql:
     image: mysql:8
     environment:
       MYSQL_ROOT_PASSWORD: secret
-      MYSQL_DATABASE: projet_annuel
+      MYSQL_DATABASE: test
     networks:
-      - projet_annuel
+      - test
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:4
@@ -42,17 +42,17 @@ services:
     depends_on:
       - mysql
     networks:
-      - projet_annuel
+      - test
 
   memcached:
     image: memcached:1.6-alpine
     networks:
-      - projet_annuel
+      - test
 
   redis:
     image: redis:5-alpine
     networks:
-      - projet_annuel
+      - test
 
 networks:
-  projet_annuel:
+  test:

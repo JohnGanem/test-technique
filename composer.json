@@ -1,12 +1,10 @@
 {
-    "name": "JohnGanem/projet-annuel",
+    "name": "JohnGanem/test-technique",
     "type": "project",
-    "description": "Serveur de récupération, de traitement et de rendu des données pour notre projet annuel.",
+    "description": "Test technique Eficia",
     "keywords": [
         "framework",
-        "laravel",
-        "security",
-        "api"
+        "laravel"
     ],
     "license": "MIT",
     "require": {
